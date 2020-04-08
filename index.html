@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base target=”_blank”>
+<meta charset="utf-8">
+<title>3栋208宿舍有限公司</title>
+<audio autoplay="" loop=""><source src="images/Valentin - A Little Story.mp3"></audio>
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="Bodo - Simple One Page Personal" name="description">
+<meta content="BdgPixel" name="author">
+<!--Fav-->
+<link href="images/favicon.ico" rel="shortcut icon">
+
+<!--styles-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
+<link href="css/magnific-popup.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!--fonts google-->
+<!--<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>-->
+
+<!--[if lt IE 9]>
+   <script type="text/javascript" src="js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!--PRELOADER-->
+<div id="preloader">
+  <div id="status">
+	<img alt="logo" src="images/logo-big.png">
+  </div>
+</div>
+<script>
+	'use strict';
+
+	window.addEventListener('load', function () {
+		var carousels = document.querySelectorAll('.carousel');
+
+		for (var i = 0; i < carousels.length; i++) {
+			carousel(carousels[i]);
+		}
+	});
+
+	function carousel(root) {
+		var figure = root.querySelector('figure'),
+			nav = root.querySelector('nav'),
+			images = figure.children,
+			n = images.length,
+			gap = root.dataset.gap || 0,
+			bfc = 'bfc' in root.dataset,
+			theta = 2 * Math.PI / n,
+			currImage = 0;
+
+		setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+		window.addEventListener('resize', function () {
+			setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+		});
+
+		setupNavigation();
+
+		function setupCarousel(n, s) {
+			var apothem = s / (2 * Math.tan(Math.PI / n));
+
+			figure.style.transformOrigin = '50% 50% ' + -apothem + 'px';
+
+			for (var i = 0; i < n; i++) {
+				images[i].style.padding = gap + 'px';
+			}for (i = 1; i < n; i++) {
+				images[i].style.transformOrigin = '50% 50% ' + -apothem + 'px';
+				images[i].style.transform = 'rotateY(' + i * theta + 'rad)';
+			}
+			if (bfc) for (i = 0; i < n; i++) {
+				images[i].style.backfaceVisibility = 'hidden';
+			}rotateCarousel(currImage);
+		}
+
+		function setupNavigation() {
+			nav.addEventListener('click', onClick, true);
+
+			function onClick(e) {
+				e.stopPropagation();
+
+				var t = e.target;
+				if (t.tagName.toUpperCase() != 'BUTTON') return;
+
+				if (t.classList.contains('next')) {
+					currImage++;
+				} else {
+					currImage--;
+				}
+
+				rotateCarousel(currImage);
+			}
+		}
+
+		function rotateCarousel(imageIndex) {
+			figure.style.transform = 'rotateY(' + imageIndex * -theta + 'rad)';
+		}
+	}
+		</script>
+<div class="clear"></div>
+</header>
+<!--/.PRELOADER END-->
+
+<!--HEADER -->
+<div class="header">
+  <div class="for-sticky">
+	<!--LOGO-->
+	<div class="col-md-2 col-xs-6 logo">
+	  <a href="index.html"><img alt="logo" class="logo-nav" src="images/logo.png"></a>
+	</div>
+	<!--/.LOGO END-->
+  </div>
+  <div class="menu-wrap">
+	<nav class="menu">
+	  <div class="menu-list">
+		<a data-scroll="" href="#home" class="active">
+		  <span>首页</span>
+		</a>
+		<a data-scroll="" href="#about">
+		  <span>简介</span>
+		</a>
+		<a data-scroll="" href="#work">
+		  <span>工作</span>
+		</a>
+		 <a data-scroll="" href="#services">
+		  <span>各项目介绍</span>
+		</a>
+		<a data-scroll="" href="#employement">
+		  <span>人员</span>
+		</a>
+		<a data-scroll="" href="#skill">
+		  <span>进度</span>
+		</a>
+		<a data-scroll="" href="#education">
+		  <span>过往</span>
+		</a>
+		<a data-scroll="" href="#contact">
+		  <span>留言</span>
+		</a>
+	  </div>
+	</nav>
+	<button class="close-button" id="close-button">Close Menu</button>
+  </div>
+  <button class="menu-button" id="open-button">
+	<span></span>
+	<span></span>
+	<span></span>
+  </button><!--/.for-sticky-->
+</div>
+<!--/.HEADER END-->
+
+<!--CONTENT WRAP-->
+<div class="content-wrap">
+  <!--CONTENT-->
+  <div class="content">
+	<!--HOME-->
+	<section id="home">
+	  <div class="container">
+		<div class="row">
+		  <div class="wrap-hero-content">
+			  <div class="hero-content">
+				<h1>你好</h1>
+				<br>
+				<span class="typed"></span>
+			  </div>
+		  </div>
+		  <div class="mouse-icon margin-20">
+			<div class="scroll"></div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<!--/.HOME END-->
+
+	<!--ABOUT-->
+	<section id="about">
+	  <div class="col-md-6 col-xs-12 no-pad">
+		<div class="bg-about"></div>
+	  </div>
+	  <div class="col-md-6 col-sm-12 col-xs-12 white-col">
+		<div class="row">
+		  <!--OWL CAROUSEL2-->
+		  <div class="owl-carousel2">
+			<div class="col-md-12">
+			  <div class="wrap-about">
+				<div class="w-content">
+				  <p class="head-about">
+					专注品牌事业十余秒，是一家兼具国际视野、创新动力、全方位跨平台的公司。公司业务涉及销毁作业、吃喝玩乐、互联网、云计算等。目前已为上百家国际优秀企业及全球50强企业提供了专业有效的品牌传播解决方案
+				  </p>
+				  
+				  <h5 class="name">
+					3栋208宿舍有限公司
+				  </h5>
+				  <img alt="signature" src="images/signature.png">
+				</div>
+			  </div>
+			</div>
+		  
+			<div class="col-md-12 col-sm-12 col-xs-12 white-col">
+			  <div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+				  <div class="wrap-about">
+					<table class="w-content">
+					  <tr>
+						<td class="title">名字 </td>
+						<td class="break">:</td>
+						<td> 3栋208宿舍有限公司</td>
+					  </tr>
+					  <tr>
+						<td class="title">邮件 </td>
+						<td class="break">:</td>
+						<td> lihuiheng2245@dingtalk.com</td>
+					  </tr>
+					  <tr>
+						<td class="title">地址 </td>
+						<td class="break">:</td>
+						<td> 广东省广州市花都区新华镇雅瑶东路</td>
+					  </tr>
+					</table>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <!--/.OWL CAROUSEL2 END-->
+		</div>
+	  </div>
+	</section>
+	<!--/.ABOUT END-->
+
+	<!--WORK-->
+	<section class="grey-bg mar-tm-10" id="work">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-3">
+			<h3 class="title-small">
+			  <span>工作</span>
+			</h3>
+			<p class="content-detail">
+				专注品牌事业十余年，是一家兼具国际视野、创新动力、全方位跨平台的品牌咨询与设计整合服务公司。公司业务涉及销毁作业、吃喝玩乐、代考试、代写作业……
+			</p>
+		  </div>
+		  <div class="col-md-9 content-right">
+			<!--PORTFOLIO IMAGE-->
+			<ul class="portfolio-image">
+			  <li class="col-md-6">
+				<a href="images/bw-1.png"><img alt="image" src="images/bw-1.png">
+				  <div class="decription-wrap">
+					<div class="image-bg">
+					   <p class="desc">撕作业</p>
+					</div>
+
+				  </div>
+				</a>
+			  </li>
+			  <li class="col-md-6">
+				<a href="images/bw-2.png"><img alt="image" src="images/bw-2.png">
+				  <div class="decription-wrap">
+					<div class="image-bg">
+					  <p class="desc">
+						吃喝玩乐
+					  </p>
+					</div>
+				  </div>
+				</a>
+			  </li>
+			  <li class="col-md-6">
+				<a href="images/bw-3.png"><img alt="image" src="images/bw-3.png">
+				  <div class="decription-wrap">
+					<div class="image-bg">
+					  <p class="desc">
+						代考试
+					  </p>
+					</div>
+				  </div>
+				</a>
+			  </li>
+			  <li class="col-md-6">
+				<a href="images/bw-4.png"><img alt="image" src="images/bw-4.png">
+				  <div class="decription-wrap">
+					<div class="image-bg">
+					  <p class="desc">
+						讲骚话
+					  </p>
+					</div>
+				  </div>
+				</a>
+			  </li>
+			  <li class="col-md-6">
+				<a href="images/bw-5.png"><img alt="image" src="images/bw-5.png">
+				  <div class="decription-wrap">
+					<div class="image-bg">
+					  <p class="desc">
+						编剧
+					  </p>  
+					</div>
+				  </div>
+				</a>
+			  </li>
+			  <li class="col-md-6">
+				<a href="images/bw-6.png"><img alt="image" src="images/bw-6.png">
+				  <div class="decription-wrap">
+					<div class="image-bg">
+					  <p class="desc">
+						代写作业
+					  </p>
+					</div>
+				  </div>
+				</a>
+			  </li>
+			</ul>
+			<!--/.PORTFOLIO IMAGE END-->
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<!--/.WORK END-->
+
+	<!--SERVICES-->
+	<section class="white-bg" id="services">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-3">
+			<h3 class="title-small">
+			  <span>各项目介绍</span>
+			</h3>
+			<p class="content-detail">
+			  本公司有不同的负责部门，可以通过不同负责人员帮助不同需求的人士，下面是本公司各项目的介绍。
+			</p>
+		  </div>
+		  <div class="col-md-9 content-right">
+			<div class="row">
+			  <ul class="listing-item">
+				<li>
+				  <div class="col-md-4 col-sm-4">
+					<h3 class="icon-use">
+					  c
+					</h3>
+					<p class="head-sm">
+					  撕作业
+					</p>
+					<p class="text-grey">
+						海量、高增长率和多样化的将作业撕毁，作业一直是各位学生的噩梦，希望能减少大家的负担，但是本公司不承担任何后果。
+					</p>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-4 col-sm-4">
+					<h3 class="icon-use">
+					  b
+					</h3>
+					<p class="head-sm">
+					  吃喝玩乐
+					</p>
+					<p class="text-grey">
+						吃喝玩乐是我们公司的重点，也是大家的渴望，如果有什么关于这方面的问题，可以向我们咨询，可以让您得到一个满意的答案。
+					</p>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-4 col-sm-4">
+					<h3 class="icon-use">
+					  d
+					</h3>
+					<p class="head-sm">
+						云数据中心操作系统
+					</p>
+					<p class="text-grey">
+					  本公司有专业的技术人员，精通Scratch，Python，HTML，EV3，硬件修理，3-208宿舍有限公司的云数据中心控制华南区。
+					</p>
+				  </div>
+				</li>
+			  </ul>
+
+			  <ul class="listing-item">
+				<li>
+				  <div class="col-md-4 col-sm-4">
+					<p class="icon-use">
+					  f
+					</p>
+					<p class="head-sm">
+					  代考试
+					</p>
+					<p class="text-grey">
+					  本公司由专业学霸代考试。本公司的专业学霸平均分数高于114分，有年级前十，有班级前十，不同等级的学霸佣金不同。
+					</p>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-4 col-sm-4">
+					<h3 class="icon-use">
+					  p
+					</h3>
+					<p class="head-sm">
+					  编剧
+					</p>
+					<p class="text-grey">
+					  本公司的编剧是一级的棒，会编古代剧，民国剧，现代剧，冒险剧……由专业话剧团团长，冒险小说家专门编写精彩故事。
+					</p>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-4 col-sm-4">
+					<h3 class="icon-use">
+					  m
+					</h3>
+					<p class="head-sm">
+						代写作业
+					</p>
+					<p class="text-grey">
+						本公司由专业学霸代写作业。本公司的专业学霸平均作业水平达到A+，都是有班级前十，不同的作业佣金不同。
+					</p>
+				  </div>
+				</li>
+			  </ul>
+
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<!--/.SERVICES END-->
+
+	<!--EMPLOYEMENT-->
+	<section class="grey-bg" id="employement">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-3">
+			<h3 class="title-small">
+			 <body background="image/1.jpg"></body>
+			  <span>人员介绍</span>
+			</h3>
+			<p class="content-detail">
+			  3栋208宿舍有限公司能达到今天的辉煌离不开我们的同事们的辛勤付出
+			</p>
+		  </div>
+		  <div class="col-md-9 content-right">
+			<div class="row">
+			  <ul class="listing-item">
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  小冯
+						</h2>
+						<p class="job">
+						  行政部部长
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							小冯是本公司的管理员，也是其中一个学霸，负责各项目的正常运行。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  小刘
+						</h2>
+						<p class="job">
+						  学霸
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							小刘是本公司顶尖的学霸，属于年级前十。小刘的佣金也是最高的。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+			  </ul>  
+			  <ul class="listing-item">
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  小谭
+						</h2>
+						<p class="job">
+						  董事长 
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							小谭是本公司的创始人兼董事长，首席故事编剧，最高执行官，学霸。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  小郭
+						</h2>
+						<p class="job">
+						  编剧
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							小郭是本公司的活宝之一，也是其中一个编剧，班级型学霸，成绩稳定。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+			  <ul class="listing-item">
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  小陈
+						</h2>
+						<p class="job">
+						  执行官 
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							小陈是本公司的班级型学霸，在年级上也很有地位，也很有管理能力。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  小李
+						</h2>
+						<p class="job">
+						  程序员
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							小李是本公司的程序员，负责技术部，会各种应急技术处理，唯一的非学霸。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<!--/.EMPLOYEMENT END-->
+
+	<!--SKILLS-->
+	<section class="white-bg" id="skill">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-3">
+			<h3 class="title-small">
+			  <span>各科把握度</span>
+			</h3>
+			<p class="content-detail">
+			  对于不同的科目，我们的把握度不同，有一些把握度大一点，一些小一点。
+			</p>
+		  </div>
+		  <div class="col-md-9 content-right">
+			<!--SKILLST-->
+			<div class="skillst">
+			  <div class="skillbar" data-percent="78%">
+				<div class="title head-sm">
+				  语文
+				</div>
+				<div class="count-bar">
+				  <div class="count"></div>
+				</div>
+			  </div>
+			  <div class="skillbar" data-percent="88%">
+				<div class="title head-sm">
+				  数学
+				</div>
+				<div class="count-bar">
+				  <div class="count"></div>
+				</div>
+			  </div>
+			  <div class="skillbar" data-percent="92%">
+				<div class="title head-sm">
+				  英语
+				</div>
+				<div class="count-bar">
+				  <div class="count"></div>
+				</div>
+			  </div>
+			  <div class="skillbar" data-percent="74%">
+				<div class="title head-sm">
+				  历史
+				</div>
+				<div class="count-bar">
+				  <div class="count"></div>
+				</div>
+			  </div>
+			  <div class="skillbar" data-percent="70.5%">
+				<div class="title head-sm">
+				  政治
+				</div>
+				<div class="count-bar">
+				  <div class="count"></div>
+				</div>
+			  </div>
+			</div>
+			<!--/.SKILLST END-->
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<!--/.SKILLS END-->
+
+	<!--EDUCATION-->
+	<section class="image/1.jpg" id="education">
+	<body background="image/1.jpg"></body>
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-3">
+			<h3 class="title-small">
+			  <span>过往</span>
+			</h3>
+		  </div>
+		  <div class="col-md-9 content-right">
+			<div class="row">
+			  <ul class="listing-item">
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  2019年8月
+						</h2>
+						<p class="job">
+						  建立宿舍组织
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							2019年8月末212宿舍（208宿舍的前身）建立，成为国际部其中一个组织。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  2019年9月1日
+						</h2>
+						<p class="job">
+						  正式行政
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							从2019年9月1日开始，212宿舍正式开始行政，逐渐出现分布，为日后奠基。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+			  <ul class="listing-item">
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  2019年9月
+						</h2>
+						<p class="job">
+						  2019年9月中末期 
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							2019年中末期开始，212宿舍逐渐出现现在各项目，尤其是讲骚话和编剧。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+
+				<li>
+				  <div class="col-md-6 col-sm-6">
+					<div class="wrap-card">
+					  <div class="card">
+						<h2 class="year">
+						  2020年1月11日
+						</h2>
+						<p class="job">
+						  2020年1月11日中午
+						</p>
+						<hr>
+						<div class="text-detail">
+						  <p>
+							2020年1月11日中午，212宿舍解体，本组织搬迁至208室，公司正式成立。
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<!--/.EDUCATION END-->
+
+	<!--TESTIMONIAL-->
+	<section id="testimonial">
+	  <div class="container">
+		<div class="row wrap-testimonial">
+		  <div class="col-md-10 col-md-offset-1">
+			<div class="owl-carousel">
+			  <div class="list-testimonial">
+				<div class="content-testimonial">
+				  <h3 class="testi">
+					“ 人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。 ”
+				  </h3>
+				  <p class="people">
+					罗曼.罗兰
+				  </p>
+				</div>
+			  </div>
+			  <div class="list-testimonial">
+				<div class="content-testimonial">
+				  <h3 class="testi">
+					“ 当许多人在一条路上徘徊不前时，他们不得不让开一条大路，让那珍惜时间的人赶到他们的前面去。 ”
+				  </h3>
+				  <p class="people">
+					苏格拉底
+				  </p>
+				</div>
+			  </div>
+			  <div class="list-testimonial">
+				<div class="content-testimonial">
+				  <h3 class="testi">
+					“ 人的智慧掌握着三把钥匙，一把开启数字，一把开启字母，一把开启音符。知识、思想、幻想就在其中。 ”
+				  </h3>
+				  <p class="people">
+					雨果
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="mask-testimonial"></div>
+	</section>
+	<!--/.TESTMONIAL END-->
+
+	<!--CONTACT-->
+	<section id="contact" class="white-bg">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-3">
+			<h3 class="title-small">
+			  <span>留言</span>
+			</h3>
+			<p class="content-detail">
+			  如果您有什么问题或者什么意见，可以再下方的留言板留言。
+			</p>
+
+		  </div>
+		  <div class="col-md-9 content-right">
+			<form>
+			  <div class="group">
+				<input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>姓名</label>
+			  </div>
+			  <div class="group">
+				<input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>邮箱</label>
+			  </div>
+			  <div class="group">
+				<textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>留言</label>
+			  </div>
+			  <input id="sendMessage" name="sendMessage" type="submit" value="Send Message">
+			</form>
+		  </div>
+		</div>
+	  </div>
+	</section>
+	<!--/.CONTACT END-->
+	
+	<!--FOOTER-->
+	<footer>
+	  <div class="footer-top">
+		<ul class="socials">
+		  <li class="facebook">
+			<a href="留言/QQ.html" data-hover="QQ">QQ</a>
+		  </li>
+		  <li class="twitter">
+			<a href="留言/钉钉.html" data-hover="钉钉">钉钉</a>
+		  </li>
+		  <li class="gplus">
+			<a href="留言/邮箱.html" data-hover="邮箱">邮箱</a>
+		  </li>
+		</ul>
+	  </div>
+
+	  <div class="footer-bottom">
+		<div class="container">
+		  <div class="row">
+		  </div>
+		</div>
+	  </div>
+	</footer>
+	<!--/.FOOTER-END-->
+
+  <!--/.CONTENT END-->
+  </div>
+<!--/.CONTENT-WRAP END-->
+</div>
+
+
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.appear.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/classie.js" type="text/javascript"></script>
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+<script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="js/masonry.js" type="text/javascript"></script>
+<script src="js/smooth-scroll.min.js" type="text/javascript"></script>
+<script src="js/typed.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<canvas class="fireworks" style="position:fixed;left:0px;top:0px;z-index:1;pointer-events:none;width:1440px;height:451px;" width="2880" height="902"></canvas>
+<script src="js/anime.min.js"></script>
+<script src="js/onclick.effects.js"></script>
+</body>
+</html>
